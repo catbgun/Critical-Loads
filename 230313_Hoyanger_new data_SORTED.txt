@@ -1,0 +1,61 @@
+Fylke	Vassdrag	Vannlokalitet_kode	Pr?vested	Tid_provetak	N-NO3	TOC	Cl	SO4	Ca	K	Mg	Natrium
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	05.04.2022	150	0.85	6.9	2.87	2	0.48	0.54	2.7
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	06.05.2022	56	1	4.4	2.93	1.6	0.4	0.36	2.4
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	08.06.2022	31	1.5	1.2	1.59	0.72	0.23	0.15	1.2
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	05.07.2022	74	3.2	0.78	1.12	0.57	0.18	0.13	0.85
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	02.08.2022	220	0.94	0.96	6.57	2.7	0.33	0.17	1.3
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	05.08.2022	<5,0	1.5	0.76	0.86	0.41	0.18	0.12	0.66
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	13.09.2022	670	0.76	1.1	16.4	6.6	0.62	0.39	2.4
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	04.10.2022	510	1.3	1.2	12.4	5.1	0.53	0.30	2.0
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	01.11.2022	290	1.6	2.3	5.36	2.7	0.41	0.27	1.7
+VESTLAND	H?yanger (Daleelva)	079-58878	Gautingsdalelva	06.12.2022	340	1.1	1.1	12	5.0	0.53	0.40	1.8
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	05.04.2022	76	0.41	1.8	1.05	0.7	0.18	0.18	1
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	06.05.2022	58	0.42	2.7	0.96	0.68	0.22	0.25	1.5
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	08.06.2022	85	0.64	2.1	0.78	0.47	0.27	0.24	1.3
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	05.07.2022	44	0.97	1.4	0.68	0.34	0.15	0.14	0.9
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	02.08.2022	20	0.33	1.2	0.64	0.29	0.12	0.098	0.74
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	05.08.2022	14	0.97	0.88	0.67	0.34	0.16	0.12	0.71
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	13.09.2022	12	0.48	2.7	0.56	0.26	0.13	0.1	0.66
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	04.10.2022	12	0.67	0.74	0.56	0.24	0.11	0.085	0.61
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	01.11.2022	38	0.66	1.2	0.6	0.30	0.14	0.12	0.80
+VESTLAND	H?yanger (Daleelva)	079-58879	Hovedelv v. kraftstasjon	06.12.2022	21	0.63	0.77	0.47	0.27	0.13	0.098	0.65
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	05.04.2022	64	0.64	1.6	0.78	0.52	0.16	0.16	0.93
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	06.05.2022	59	0.44	2.7	0.94	0.65	0.22	0.26	1.5
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	08.06.2022	54	0.59	2.1	0.71	0.44	0.26	0.24	1.3
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	05.07.2022	35	<0,30	1.6	0.59	0.29	0.14	0.14	0.9
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	02.08.2022	21	0.31	1.2	0.59	0.26	0.12	0.1	0.74
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	05.08.2022	17	0.49	1.1	0.55	0.28	0.18	0.14	0.76
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	13.09.2022	12	0.71	0.83	0.53	0.27	0.14	0.1	0.66
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	04.10.2022	10	0.72	0.79	0.5	0.23	0.13	0.084	0.63
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	01.11.2022	25	0.73	1.2	0.47	0.24	0.14	0.11	0.76
+VESTLAND	H?yanger (Daleelva)	079-58880	Kraftverk K2	06.12.2022	17	0.8	0.82	0.44	0.26	0.14	0.097	0.68
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	05.04.2022	110	1.4	10	2.35	2.5	0.44	0.55	3.8
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	06.05.2022	7.3	1.9	5.5	1.54	1.2	0.29	0.34	2.9
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	08.06.2022	14	2.4	1.1	0.89	0.54	0.15	0.11	1
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	05.07.2022	29	7	1.3	0.71	0.66	0.15	0.14	1
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	02.08.2022	140	2.5	1.9	1.79	1.1	0.27	0.2	1.6
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	05.08.2022	13	1.5	1.4	1	0.52	0.13	0.13	1
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	13.09.2022	400	1.4	2.5	2.47	2.1	0.62	0.34	2.3
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	04.10.2022	340	1.8	2.1	2.66	1.8	0.44	0.28	1.9
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	01.11.2022	130	2.9	2.6	1.78	1.2	0.29	0.25	1.7
+VESTLAND	H?yanger (Daleelva)	079-58881	Siplo, sideelv	06.12.2022	580	1.4	2.5	3.35	2.4	0.57	0.42	2.3
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	05.04.2022	140	0.56	2.3	1.6	1	0.28	0.23	1.3
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	06.05.2022	84	0.6	3	1.47	0.97	0.29	0.28	1.6
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	08.06.2022	120	0.67	2.1	1.45	0.8	0.28	0.23	1.4
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	05.07.2022	100	0.63	1.5	1.06	0.61	0.24	0.18	1
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	02.08.2022	100	0.35	1.3	1.38	0.7	0.22	0.15	0.96
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	05.08.2022	310	1.4	1.3	1.71	1.1	0.35	0.24	1.2
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	13.09.2022	34	0.75	0.88	0.93	0.45	0.23	0.12	0.74
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	04.10.2022	24	0.74	0.8	0.66	0.27	0.11	0.087	0.64
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	01.11.2022	65	0.85	1.4	0.79	0.44	0.17	0.13	0.87
+VESTLAND	H?yanger (Daleelva)	079-58882	Ved Dale	06.12.2022	21	0.68	0.72	0.49	0.29	0.14	0.099	0.67
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	05.04.2022	120	0.81	2.6	1.38	0.99	0.28	0.22	1.4
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	06.05.2022	69	0.71	3	1.23	0.88	0.28	0.28	1.7
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	08.06.2022	61	1	2.1	1.01	0.57	0.27	0.21	1.4
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	05.07.2022	54	1	1.5	0.79	0.45	0.19	0.16	1
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	02.08.2022	30	0.38	1.2	0.77	0.31	0.13	0.096	0.78
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	05.08.2022	43	1.4	1.2	0.89	0.47	0.18	0.14	0.9
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	13.09.2022	24	0.55	0.91	0.78	0.35	0.16	0.11	0.74
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	04.10.2022	30	0.8	0.84	0.75	0.34	0.15	0.091	0.69
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	01.11.2022	97	1.1	1.5	1.07	0.59	0.23	0.16	1.0
+VESTLAND	H?yanger (Daleelva)	079-58883	Ved utl?p	06.12.2022	29	1.4	0.72	0.54	0.31	0.17	0.10	0.70

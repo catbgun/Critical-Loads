@@ -1,0 +1,174 @@
+---
+title: "Critical Load"
+output: html_document
+date: "2023-02-17"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#magrittr, dplyr
+```
+
+Old data from vannmijø from long to wide format to select only those samples with all parameters
+```{r}
+oldy <- read.table("230310_Hoyanger Vannmijo data_SORTED.txt", header=TRUE, sep="\t", na.string=c(""), fill=TRUE)
+nrow(oldyyy)
+#Remove rows that contains all NA's
+oldyyy <- oldy[rowSums(is.na(oldy)) != ncol(oldy), ]
+# From the source:
+# "subject" and "sex" are columns we want to keep the same
+# "condition" is the column that contains the names of the new column to put things in
+# "measurement" holds the measurements
+library(reshape2)
+class(oldy$Verdi)
+data_wide <- dcast(oldyyy, Vannlokalitet_kode + Tid_provetak + Provenr ~ Parameter_id, value.var="Verdi")
+
+data_wide
+data_wide2 <- na.omit(data_wide)
+
+write.csv(data_wide2, "C:/Users/CBG/OneDrive - NIVA/1 Projects/Critical Load/Critical-Loads/Vdata_wide.csv", row.names=FALSE)
+```
+
+New data from email. Some cleanup done in excel
+```{r echo = T, results = 'hide'}
+new <- read.table("230313_Hoyanger_new data_SORTED.txt", header=TRUE, sep="\t", na.string=c(""), fill=TRUE)
+```
+
+Make the date format in each file same prior to merging
+```{r}
+data_wide2$Tid_provetakx <- format(as.POSIXct(data_wide2$Tid_provetak,
+                           format = "%Y-%m-%d %H:%M:%S"),
+                format = "%d.%m.%Y")
+
+new$Tid_provetakx <- format(as.POSIXct(new$Tid_provetak,
+                           format = "%d.%m.%Y"),
+                format = "%d.%m.%Y")
+
+data_wide2$month <- format(as.Date(data_wide2$Tid_provetakx, format="%d.%m.%Y"),"%m")
+data_wide2$year <- format(as.Date(data_wide2$Tid_provetakx, format="%d.%m.%Y"),"%Y")
+new$month <- format(as.Date(new$Tid_provetakx, format="%d.%m.%Y"),"%m")
+new$year <- format(as.Date(new$Tid_provetakx, format="%d.%m.%Y"),"%Y")
+
+#merge the two 
+data_wide2$N.NO3 <- data_wide2[,8]
+jointdataset <- merge(data_wide2, new, 
+                      by = c("Vannlokalitet_kode", "Tid_provetakx", "year", "month", 
+                                              "N.NO3", "TOC", "Ca", "Mg", "Cl", "Natrium", "SO4", "K"), all=TRUE)
+jointdataset <- jointdataset[, -c(13:14)] # delete columns 5 through 7
+
+```
+
+from wide to long before plotting
+```{r}
+library(tidyr)
+data_long <- gather(jointdataset, variable, value, N.NO3:K, factor_key=TRUE)
+data_long <- data_long[, -c(5:10)]
+```
+
+Plotting
+```{r}
+library(ggplot2)
+library(magrittr)
+
+#to plot values
+ggplot(subset(data_long, variable %in% c("Natrium") & Vannlokalitet_kode %in% c("079-58878")), 
+              aes(x=Tid_provetakx, y=value, fill=month))+
+  geom_col(width=0.8, position=position_dodge())
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+  facet_grid(Vannlokalitet_kode~.)
+
+#to plot counts
+ggplot(subset(data_long, variable %in% c("Natrium") & Vannlokalitet_kode %in% c("079-58878")), 
+              aes(x=month, fill=month))+
+  geom_bar(width=0.8)+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  facet_grid(Vannlokalitet_kode~.)
+  
+```
+
+Monthly averages per station
+```{r}
+data_long$value2 <- as.numeric(data_long$value)
+boy <- aggregate(value2 ~ month+year+Vannlokalitet_kode+variable,data_long,mean,
+                 na.rm=TRUE)
+
+boy2 <- aggregate(value2 ~ year+Vannlokalitet_kode+variable,boy,mean,
+                 na.rm=TRUE)
+
+boy3 <- aggregate(value2 ~ Vannlokalitet_kode+variable,boy2,mean,
+                 na.rm=TRUE)
+```
+
+from long to wide to fit to template
+```{r}
+# From the source:
+# "subject" and "sex" are columns we want to keep the same
+# "condition" is the column that contains the names of the new column to put things in
+# "measurement" holds the measurements
+library(reshape2)
+boy3_wide <- dcast(boy3, Vannlokalitet_kode ~ variable, value.var="value2")
+```
+
+
+
+
+
+
+
+```{r}
+write.csv(data6, "Eiriksdal_CBG2.csv", row.names=FALSE)
+```
+
+Datoer funnet fra excel
+```{r}
+#HOYANGER
+subset(dat, subset = bf11 %in% c(1,2,3))
+data7 <- subset(data6, subset = Dates %in% c("06.12.2022", "06.09.2021",
+"04.10.2022", "13.09.2022",
+"05.02.2022", "02.08.2021",
+"05.07.2021", "02.08.2022",
+"05.08.2022", "06.06.2021",
+"03.10.2021", "05.07.2022",
+"01.11.2022", "02.05.2021",
+"22.09.2021", "08.06.2022",
+"05.04.2022", "06.05.2022",
+"31.10.2021", "05.04.2021"))
+
+myvars2 <- c("Vannlokalitet_kode", "Parameter_id", "Dates",
+            "Verdi") 
+data8 <- data7[myvars2]
+data_wide <- spread(data8, Parameter_id, Verdi)
+
+#EIRIKSDAL
+data9 <- subset(data6, subset = Dates %in% 
+  c("04.10.2022",
+"06.12.2022",
+"13.09.2022",
+"05.08.2022",
+"02.08.2022",
+"01.11.2022",
+"05.04.2022",
+"05.07.2022",
+"08.06.2022",
+"06.05.2022"))
+
+myvars2 <- c("Vannlokalitet_kode", "Parameter_id", "Dates",
+            "Verdi") 
+data10 <- data9[myvars2]
+data_wideX <- spread(data10, Parameter_id, Verdi)
+
+#GAUTINGDALSELVA
+
+```
+
+
+
+```{r}
+write.csv(data_wide, "Hoyanger_CBG_wide.csv", row.names=FALSE)
+write.csv(data_wideX, "Eiriksdal_CBG_wide.csv", row.names=FALSE)
+```
