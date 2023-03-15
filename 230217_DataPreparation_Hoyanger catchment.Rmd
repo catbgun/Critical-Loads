@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Old data from vannmijø from long to wide format to select only those samples with all parameters
 ```{r}
 oldy <- read.table("230310_Hoyanger Vannmijo data_SORTED.txt", header=TRUE, sep="\t", na.string=c(""), fill=TRUE)
-nrow(oldyyy)
+
 #Remove rows that contains all NA's
 oldyyy <- oldy[rowSums(is.na(oldy)) != ncol(oldy), ]
 # From the source:
@@ -37,6 +37,7 @@ write.csv(data_wide2, "C:/Users/CBG/OneDrive - NIVA/1 Projects/Critical Load/Cri
 New data from email. Some cleanup done in excel
 ```{r echo = T, results = 'hide'}
 new <- read.table("230313_Hoyanger_new data_SORTED.txt", header=TRUE, sep="\t", na.string=c(""), fill=TRUE)
+nrow(new)
 ```
 
 Make the date format in each file same prior to merging
@@ -67,7 +68,7 @@ from wide to long before plotting
 ```{r}
 library(tidyr)
 data_long <- gather(jointdataset, variable, value, N.NO3:K, factor_key=TRUE)
-data_long <- data_long[, -c(5:10)]
+data_long <- data_long[, -c(5:9)]
 ```
 
 Plotting
@@ -116,12 +117,8 @@ boy3_wide <- dcast(boy3, Vannlokalitet_kode ~ variable, value.var="value2")
 
 
 
-
-
-
-
 ```{r}
-write.csv(data6, "Eiriksdal_CBG2.csv", row.names=FALSE)
+write.csv(boy3_wide, "230314_Hoyanger_allCatchments.csv", row.names=FALSE)
 ```
 
 Datoer funnet fra excel
